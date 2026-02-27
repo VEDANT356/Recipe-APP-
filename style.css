@@ -110,6 +110,32 @@ form button[type="submit"]:hover .recipe button:hover{
     color: white;
 }
 
+.recipe-details {
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50% , -50%);
+    border-radius: 12px;
+    background-color: #694c2f;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+
+.recipe-details ::-webkit-scrollbar{
+    width: 10px;
+
+}
+.recipe-details ::-webkit-scrollbar-thumb{
+    background: #b5b5ba;
+    border-radius: 16px;
+    --Webkit-border-radius: 16px;
+}
+
 @media screen and (max-width: 600px) {
     header nav {
         flex-direction: column;

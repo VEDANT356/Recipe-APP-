@@ -30,8 +30,38 @@ const fetchRecipes = async (query) => {
         });
         recipeContainer.appendChild(recipeDiv);
     });
+};
 
+const fetchIngredients = (meal) => {
+    let ingredients ="";
+    for(let i = 1; i <= 20; i++) {
+        const ingredient = meal[`strIngredient${i}`];
+        const measure = meal[`strMeasure${i}`];
+        if (ingredient && ingredient.trim() !== "") {
+            ingredients += `<li>${ingredient} - ${measure}</li>`;
+        }
+        else{
+            break;
+        }
+    }
+    return ingredients;
 }
+const openRecipePopup =(meal) => {
+    recipeDetailContent.innerHTML =`
+    <h2 class="recipeName">${meal.strMeal}</h2>
+    <h3> ingredient:</h3>
+    <ul class="IngredientList">${fetchIngredients(meal)}</ul>
+    <div>
+        <h3>Instructions:</h3>
+        <p class="recipeInstructions">${meal.strInstructions}</p>
+    </div>
+    `
+    recipeDetailContent.parentElement.style.display ="block";
+}
+
+recipeCloseBtn.addEventListener("click", () => {
+    recipeDetailContent.parentElement.style.display = "none";
+});
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
