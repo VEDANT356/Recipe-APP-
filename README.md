@@ -1,72 +1,106 @@
-🍲 Recipe App
+🍲 Recipe Finder App
 
-A modern and responsive Recipe Web Application built using HTML, CSS, and Vanilla JavaScript.
+A modern, responsive, and fast Recipe Search Web Application built using HTML, CSS, and Vanilla JavaScript.
 
-This app allows users to search for recipes instantly and view detailed cooking instructions in a clean, user-friendly interface. It focuses on efficient API integration, dynamic content rendering, and smooth user experience.
+This application allows users to search recipes in real time and view detailed cooking instructions through a clean and intuitive interface. The project demonstrates strong fundamentals of API integration, asynchronous JavaScript, and dynamic DOM manipulation.
 
-🚀 Features
+🌟 Live Features
+🔍 Instant Recipe Search
 
-🔍 Search Recipes by Name
-Find recipes instantly with keyword-based search.
+Search recipes by name with real-time API integration.
 
-📖 Detailed Recipe View
-View ingredients, instructions, and additional details in an organized layout.
+📖 Detailed Recipe Modal
 
-⚡ Fast & Lightweight
-Optimized for performance with efficient API calls.
+View:
 
-🎨 Clean & Responsive UI
-Works seamlessly across Mobile, Tablet, and Desktop devices.
+Ingredients list
 
-🔄 Dynamic Content Rendering
-Recipes are loaded dynamically without refreshing the page.
+Step-by-step cooking instructions
+
+Recipe image
+
+Additional metadata
+
+⚡ Optimized Performance
+
+Efficient API handling using async/await for smooth user experience.
+
+🎨 Fully Responsive Design
+
+Works seamlessly across:
+
+📱 Mobile
+
+💻 Desktop
+
+📲 Tablet
+
+🔄 Dynamic Rendering
+
+Recipes load dynamically without page refresh (Single Page Behavior).
 
 🛠️ Tech Stack
 
-HTML5 – Structure
+HTML5 – Semantic Structure
 
 CSS3 – Styling & Responsive Design
 
-JavaScript (Vanilla JS) – Logic & DOM Manipulation
+Vanilla JavaScript – Logic & DOM Manipulation
 
-Recipe API – Data Fetching & Integration
+Fetch API – Data Retrieval
 
-🧠 Core Concepts Demonstrated
+Recipe API (TheMealDB) – External Data Source
+
+🧠 Concepts Implemented
 
 Fetch API & Asynchronous JavaScript (async/await)
 
-JSON Data Handling
+JSON Data Parsing
 
-DOM Manipulation & Dynamic Rendering
+DOM Manipulation
 
-Event Handling
+Event Listeners
 
-Error Handling & Input Validation
+Conditional Rendering
 
-Responsive Layout Design
+Error Handling
 
-⚙️ How It Works
+Input Validation
 
-User enters a recipe name in the search box.
+Responsive Layout using CSS
 
-The app sends a request to the Recipe API.
+⚙️ Application Workflow
 
-Recipe data is fetched in JSON format.
+User enters a recipe name in the search bar.
 
-Matching recipes are dynamically displayed on the screen.
+The app sends an API request using Fetch.
 
-🔮 Future Enhancements
+JSON response is received.
 
-🚧 Add Dark Mode 🌙
-🚧 Add Favorite Recipes Feature ⭐
-🚧 Improve UI animations & transitions
-🚧 Add filter by category (Veg / Non-Veg / Dessert)
-🚧 Store favorites using LocalStorage
+Matching recipes are dynamically rendered.
+
+User can open detailed recipe information.
+
+🔮 Planned Enhancements
+
+🌙 Dark Mode Toggle
+
+⭐ Add to Favorites
+
+💾 Store Favorites using LocalStorage
+
+🧩 Filter by Category (Veg / Non-Veg / Dessert)
+
+✨ Smooth UI Animations
+
+🔎 Search Suggestions / Auto-complete
 
 📌 Project Status
 
-🟢 Fully Functional
-🔄 Open for feature enhancements
+🟢 Production Ready
+🛠️ Open for Improvements & Feature Expansion
+
 👨‍💻 Author
 
 Vedant Kotkar
+Computer Science Student | Frontend Developer
