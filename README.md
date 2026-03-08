@@ -135,5 +135,4 @@ Designing clean and responsive user interfaces
 👨‍💻 Author
 
 Vedant Kotkar
-Computer Science Student | Aspiring Frontend Developer
-✨ Smooth UI Animations...
+Computer Science Student | 
