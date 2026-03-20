@@ -104,12 +104,6 @@ This project strengthened my understanding of:
 - Handling **dynamic UI state**
 - Designing **clean and responsive interfaces**
 
-----
-
-# 📂 PROJECT STATUS
-
-🟢 **Production Ready**  
-🚀 Actively maintained and continuously improving
 
 ---
 
