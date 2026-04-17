@@ -4,11 +4,6 @@ A modern, responsive, and high-performance **Recipe Search Web Application** bui
 
 This project demonstrates strong frontend fundamentals including **API integration, asynchronous JavaScript (async/await), dynamic DOM manipulation, and state-driven UI rendering**, all wrapped in a clean and intuitive user experience.
 
----
-
-# 🚀 LIVE DEMO
-
-(Add your deployed link here if hosted on **GitHub Pages / Netlify**)
 
 ---
 
