@@ -89,19 +89,6 @@ To evolve this project into a more advanced frontend application:
 
 ---
 
-# 💡 LEARNING OUTCOMES
-
-This project strengthened my understanding of:
-
-- Working with **real-world REST APIs**
-- Managing **asynchronous operations**
-- Structuring **scalable frontend logic**
-- Handling **dynamic UI state**
-- Designing **clean and responsive interfaces**
-
-
----
-
 # 👨‍💻 AUTHOR
 
 **Vedant Kotkar**  
