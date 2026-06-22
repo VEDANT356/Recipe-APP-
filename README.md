@@ -16,7 +16,8 @@ This project allows users to search for recipes in real-time using **TheMealDB A
 
 ### Home Page
 
-![Uploading image.png…]()
+<img width="1896" height="908" alt="image" src="https://github.com/user-attachments/assets/e17b580e-d1d3-4dbe-917c-28ad563f2580" />
+
 
 ### Recipe Details Modal
 
