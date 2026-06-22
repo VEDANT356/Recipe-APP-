@@ -8,7 +8,7 @@ This project allows users to search for recipes in real-time using **TheMealDB A
 
 ## 🚀 Live Demo
 
-🔗 Add your Vercel deployment link here
+https://recipe-app-kohl-one.vercel.app/
 
 ---
 
