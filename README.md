@@ -1,101 +1,172 @@
-# 🍲 RECIPE FINDER APP
+# 🍲 Recipe Finder App
 
-A modern, responsive, and interactive **Recipe Search Web Application** built using **HTML, CSS, and Vanilla JavaScript**.
+A modern and responsive Recipe Search Web Application built using **HTML, CSS, and Vanilla JavaScript**.
 
-The project demonstrates key frontend development concepts including **API integration, asynchronous JavaScript, dynamic DOM manipulation, and responsive UI design**, while delivering a seamless and user-friendly recipe discovery experience.
-
----
-
-# 🚀 FEATURES
-
-## 🔍 Recipe Search
-
-Search recipes instantly using real-time data from **TheMealDB API**.
-
-## 📖 Detailed Recipe View
-
-View complete recipe information through an interactive modal, including:
-
-* 🥘 Ingredients List
-* 📜 Cooking Instructions
-* 🖼️ Recipe Image
-* 🌍 Recipe Category & Origin
-
-## ⚡ Efficient Data Fetching
-
-* Asynchronous API requests using **async/await**
-* Loading states for improved user experience
-* Error handling for failed or invalid searches
-
-## 🔄 Dynamic Content Rendering
-
-* Recipes update instantly without page reloads
-* Smooth and responsive user interactions
-* Dynamic UI updates based on search results
-
-## 📱 Fully Responsive Design
-
-Optimized for multiple devices:
-
-* 📱 Mobile Devices
-* 📲 Tablets
-* 💻 Desktop Systems
-
-## 🎨 Clean & User-Friendly Interface
-
-* Modern card-based layout
-* Interactive recipe modal
-* Intuitive navigation and usability
+This project allows users to search for recipes in real-time using **TheMealDB API**, view detailed cooking instructions, ingredients, and recipe information through an interactive modal interface.
 
 ---
 
-# 🛠️ TECH STACK
+## 🚀 Live Demo
 
-* **HTML5** – Semantic and structured layout
-* **CSS3** – Responsive styling and layouts
-* **JavaScript (Vanilla)** – Application logic and interactivity
-* **Fetch API** – Asynchronous data retrieval
-* **TheMealDB API** – Recipe data source
+🔗 Add your Vercel deployment link here
 
 ---
 
-# 🧠 CORE CONCEPTS DEMONSTRATED
+## 📸 Screenshots
+
+### Home Page
+
+![Uploading image.png…]()
+
+### Recipe Details Modal
+
+<img width="1897" height="905" alt="image" src="https://github.com/user-attachments/assets/efd8d5be-51d0-41c6-835d-b0f4bb4c631c" />
+
+
+---
+
+## ✨ Features
+
+### 🔍 Recipe Search
+
+* Search recipes instantly
+* Real-time recipe fetching using API
+* Fast and responsive results
+
+### 📖 Detailed Recipe View
+
+Users can view:
+
+* Recipe Name
+* Ingredients List
+* Cooking Instructions
+* Recipe Category
+* Recipe Origin (Country)
+
+### ⚡ API Integration
+
+* Fetches live data from TheMealDB API
+* Uses Async/Await for asynchronous requests
+* Handles errors gracefully
+
+### 🔄 Dynamic UI Updates
+
+* Recipes update without page reload
+* Dynamic DOM manipulation
+* Interactive user experience
+
+### 📱 Responsive Design
+
+Optimized for:
+
+* Mobile Devices
+* Tablets
+* Desktop Screens
+
+### 🎨 Modern Interface
+
+* Recipe cards
+* Modal popup
+* Clean layout
+* User-friendly design
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+
+### API
+
+* TheMealDB API
+
+### Concepts Used
+
+* Fetch API
+* Async/Await
+* JSON Handling
+* DOM Manipulation
+* Event Listeners
+* Conditional Rendering
+* Responsive Design
+
+---
+
+## 📂 Project Structure
+
+```text
+recipe-finder/
+│
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+```
+
+---
+
+## ⚙️ How It Works
+
+1. User enters a recipe name.
+2. Application sends a request to TheMealDB API.
+3. Matching recipes are fetched.
+4. Recipes are displayed dynamically.
+5. User clicks "Get Recipe".
+6. A modal opens showing ingredients and instructions.
+
+---
+
+## 🧠 What I Learned
+
+Through this project, I learned:
 
 * API Integration
-* Asynchronous JavaScript (async/await)
-* JSON Data Handling
+* Async JavaScript
+* Fetch API
 * Dynamic DOM Manipulation
-* Event-Driven Programming
-* Conditional Rendering
-* Error Handling & Validation
-* Modal Component Implementation
-* Responsive Design Principles
+* Event Handling
+* Responsive UI Development
+* Error Handling
+* Frontend Project Development
 
 ---
 
-# ⚙️ APPLICATION WORKFLOW
+## 🔮 Future Improvements
 
-1. User enters a recipe name in the search field.
-2. The application sends a request to TheMealDB API.
-3. Recipe data is received and processed.
-4. Matching recipes are dynamically displayed on the page.
-5. Users can open a detailed modal view for complete recipe information.
-
----
-
-# 🔮 FUTURE ENHANCEMENTS
-
-* 🌙 Dark / Light Mode Toggle
-* ⭐ Favorite Recipes Feature
-* 💾 Local Storage Integration
-* 🧩 Category-Based Filtering
-* 🔎 Auto-Complete Search Suggestions
-* ✨ UI Animations & Micro-interactions
-* 🏗️ Modular JavaScript Architecture
+* 🌙 Dark Mode
+* ⭐ Favorite Recipes
+* 💾 Local Storage Support
+* 🔎 Search Suggestions
+* 🏷️ Category Filters
+* 🎤 Voice Search
+* 📹 Recipe Video Integration
+* React Version of the Application
 
 ---
 
-# 👨‍💻 AUTHOR
+## 👨‍💻 Author
 
-**Vedant Kotkar**
-Computer Science Student | Frontend Developer
+### Vedant Kotkar
+
+Computer Science Student | Aspiring Frontend Developer
+
+#### Skills
+
+* HTML
+* CSS
+* JavaScript
+* React.js
+* API Integration
+* Responsive Web Design
+
+#### Connect With Me
+
+LinkedIn:
+https://www.linkedin.com/in/vedant-kotkar-48976236b/
+
+GitHub:
+https://github.com/VEDANT356
