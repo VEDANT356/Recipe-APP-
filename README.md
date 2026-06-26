@@ -153,7 +153,7 @@ Through this project, I learned:
 
 ### Vedant Kotkar
 
-Computer Science Student | Aspiring Frontend Developer
+Computer Science Student |  Frontend Developer
 
 #### Skills
 
