@@ -169,8 +169,10 @@ Computer Science Student |  Frontend Developer
 LinkedIn:
 https://www.linkedin.com/in/vedant-kotkar-48976236b/
 
+
 GitHub:
 https://github.com/VEDANT356
+
 
 Instagram:
 https://www.instagram.com/st.v3dant
