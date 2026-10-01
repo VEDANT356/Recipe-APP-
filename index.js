@@ -22,7 +22,7 @@ const fetchRecipes = async (query) => {
       recipeDiv.classList.add("recipe");
 
       recipeDiv.innerHTML = `
-        <img src="${meal.strMealThumb}">
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
         <h3>${meal.strMeal}</h3>
         <p><span>${meal.strArea}</span> Dish</p>
         <p>Category: <span>${meal.strCategory}</span></p>
@@ -69,16 +69,30 @@ function openRecipe(meal) {
 
   document.getElementById("recipeTitle").innerText = meal.strMeal;
 
-  // IMPORTANT: use innerHTML (because <li>)
   document.getElementById("recipeIngredients").innerHTML = fetchIngredients(meal);
 
   document.getElementById("recipeInstructions").innerText = meal.strInstructions;
 }
 
-
 function closeRecipe() {
   document.getElementById("recipeModal").style.display = "none";
 }
+
+
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("recipeModal");
+
+  if (e.target === modal) {
+    closeRecipe();
+  }
+});
+
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeRecipe();
+  }
+});
 
 
 form.addEventListener('submit', (e) => {
@@ -92,3 +106,8 @@ form.addEventListener('submit', (e) => {
 
   fetchRecipes(searchInput);
 });
+
+window.addEventListener("load", () => {
+  fetchRecipes("chicken");
+});
+
