@@ -107,7 +107,51 @@ form.addEventListener('submit', (e) => {
   fetchRecipes(searchInput);
 });
 
+const fetchRandomRecipes = async () => {
+  recipeContainer.innerHTML = "<h2>Loading recipes...</h2>";
+
+  try {
+    const recipes = [];
+
+    for (let i = 0; i < 6; i++) {
+      const data = await fetch(
+        "https://www.themealdb.com/api/json/v1/1/random.php"
+      );
+
+      const response = await data.json();
+      recipes.push(response.meals[0]);
+    }
+
+    recipeContainer.innerHTML = "";
+
+    recipes.forEach(meal => {
+      const recipeDiv = document.createElement("div");
+      recipeDiv.classList.add("recipe");
+
+      recipeDiv.innerHTML = `
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+        <h3>${meal.strMeal}</h3>
+        <p><span>${meal.strArea}</span> Dish</p>
+        <p>Category: <span>${meal.strCategory}</span></p>
+      `;
+
+      const button = document.createElement("button");
+      button.textContent = "Get Recipe";
+
+      button.addEventListener("click", () => {
+        openRecipe(meal);
+      });
+
+      recipeDiv.appendChild(button);
+      recipeContainer.appendChild(recipeDiv);
+    });
+
+  } catch (error) {
+    recipeContainer.innerHTML = "<h2>Error fetching recipes</h2>";
+  }
+};
+
 window.addEventListener("load", () => {
-  fetchRecipes("chicken");
+  fetchRandomRecipes();
 });
 
