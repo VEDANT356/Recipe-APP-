@@ -1,16 +1,15 @@
+
 import { useEffect, useState } from "react";
 import "./App.css";
+import RecipeCard from "./components/RecipeCard";
 
 function App() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [modalLoading, setModalLoading] = useState(false);
-
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
-
   const [favorites, setFavorites] = useState([]);
 
   const categories = [
@@ -50,7 +49,6 @@ function App() {
     }
   };
 
-
   const searchRecipes = async () => {
     if (!search.trim()) {
       fetchRandomRecipes();
@@ -62,9 +60,7 @@ function App() {
       setActiveCategory("All");
 
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(
-          search
-        )}`
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(search)}`
       );
 
       const data = await response.json();
@@ -97,7 +93,6 @@ function App() {
     }
   };
 
-
   const toggleFavorite = (recipe) => {
     setFavorites((prev) => {
       const alreadyFavorite = prev.some(
@@ -105,18 +100,18 @@ function App() {
       );
 
       if (alreadyFavorite) {
-        return prev.filter((item) => item.idMeal !== recipe.idMeal);
+        return prev.filter(
+          (item) => item.idMeal !== recipe.idMeal
+        );
       }
 
       return [...prev, recipe];
     });
   };
 
-
   useEffect(() => {
     fetchRandomRecipes();
   }, []);
-
 
   const filteredRecipes =
     activeCategory === "All"
@@ -129,8 +124,6 @@ function App() {
 
   return (
     <div className="app">
-
-
       <nav className="navbar">
         <div className="logo">
           <span>♨</span> Recipe <b>App</b>
@@ -162,10 +155,7 @@ function App() {
         </div>
       </nav>
 
-
       <main>
-
-
         <section className="hero">
           <p className="eyebrow">GOOD FOOD • GOOD MOOD</p>
 
@@ -177,8 +167,6 @@ function App() {
             Find your favorite recipes and explore something new.
           </p>
         </section>
-
-
 
         <div className="categories">
           {categories.map((category) => (
@@ -194,16 +182,12 @@ function App() {
           ))}
         </div>
 
-
-
         {loading ? (
           <div className="loading">
             <div className="spinner"></div>
-
             <p>Loading delicious recipes...</p>
           </div>
-        ) : filteredRecipes.length ===
-          0 ? (
+        ) : filteredRecipes.length === 0 ? (
           <div className="empty-state">
             <h2>No recipes found</h2>
 
@@ -223,56 +207,13 @@ function App() {
               );
 
               return (
-                <article
-                  className="recipe-card"
+                <RecipeCard
                   key={recipe.idMeal}
-                >
-
-                  <div className="image-wrapper">
-                    <img
-                      src={recipe.strMealThumb}
-                      alt={recipe.strMeal}
-                    />
-
-                    <button
-                      className={`heart ${
-                        isFavorite ? "liked" : ""
-                      }`}
-                      onClick={() => toggleFavorite(recipe)}
-                      aria-label={
-                        isFavorite
-                          ? "Remove from favorites"
-                          : "Add to favorites"
-                      }
-                    >
-                      {isFavorite ? "♥" : "♡"}
-                    </button>
-                  </div>
-
-
-                  <div className="recipe-content">
-                    <h2>{recipe.strMeal}</h2>
-
-                    <div className="meta">
-                      <span>
-                        ◉ {recipe.strArea || "World"}
-                      </span>
-
-                      <span>
-                        ✦ {recipe.strCategory || "Recipe"}
-                      </span>
-                    </div>
-
-                    <button
-                      className="get-recipe"
-                      onClick={() =>
-                        getRecipeDetails(recipe.idMeal)
-                      }
-                    >
-                      Get Recipe →
-                    </button>
-                  </div>
-                </article>
+                  recipe={recipe}
+                  isFavorite={isFavorite}
+                  onToggleFavorite={toggleFavorite}
+                  onGetRecipe={getRecipeDetails}
+                />
               );
             })}
           </div>
@@ -288,7 +229,6 @@ function App() {
             className="recipe-modal"
             onClick={(e) => e.stopPropagation()}
           >
-
             <button
               className="close-modal"
               onClick={() => setSelectedRecipe(null)}
@@ -297,15 +237,12 @@ function App() {
               ×
             </button>
 
-
             {modalLoading ? (
               <div className="modal-loading">
                 Loading recipe...
               </div>
             ) : (
               <>
-
-
                 <img
                   className="modal-image"
                   src={selectedRecipe.strMealThumb}
@@ -313,12 +250,10 @@ function App() {
                 />
 
                 <div className="modal-content">
-
                   <p className="modal-category">
                     {selectedRecipe.strArea || "World"} •{" "}
                     {selectedRecipe.strCategory || "Recipe"}
                   </p>
-
 
                   <h2>{selectedRecipe.strMeal}</h2>
 
@@ -348,17 +283,13 @@ function App() {
                               key={index}
                             >
                               <span>{ingredient}</span>
-
-                              <span>
-                                {measure || ""}
-                              </span>
+                              <span>{measure || ""}</span>
                             </div>
                           );
                         }
                       )}
                     </div>
                   </section>
-
 
                   <section>
                     <h3>Instructions</h3>
@@ -367,7 +298,6 @@ function App() {
                       {selectedRecipe.strInstructions}
                     </p>
                   </section>
-
 
                   {selectedRecipe.strYoutube && (
                     <a
