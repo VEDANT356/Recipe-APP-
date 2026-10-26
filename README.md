@@ -14,6 +14,7 @@ https://recipe-app-kohl-one.vercel.app/
 
 ## 📸 Screenshots
 
+
 ### Home Page
 
 <img width="1896" height="908" alt="image" src="https://github.com/user-attachments/assets/e17b580e-d1d3-4dbe-917c-28ad563f2580" />
